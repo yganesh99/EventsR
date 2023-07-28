@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import indexRoutes from '../../routes/indexRoutes';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+
 
 import GlobalStyle from '../../global-styles';
 
@@ -31,6 +33,7 @@ export default function App() {
             />
           ))}
         </Switch>
+        <Footer /> {/* Add the footer component here */}
       </AppWrapper>
       <GlobalStyle />
     </Router>

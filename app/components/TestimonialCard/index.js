@@ -17,7 +17,7 @@ function TestimonialCard({name, image, description, rating}) {
   const emptyStars = 5 - filledStars;
 
   return (
-    <div className="uk-card uk-card-default uk-width-1-2@m uk-margin-right uk-margin-left test-card uk-height-medium uk-border-rounded">
+    <div className="uk-card uk-card-default uk-margin-right uk-margin-left uk-margin-bottom test-card uk-border-rounded">
       <div className="uk-card-header uk-margin-remove-bottom">
           <div className="uk-flex">
             <div className='uk-width-auto'>

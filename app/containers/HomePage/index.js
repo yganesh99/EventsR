@@ -45,9 +45,9 @@ export function HomePage() {
           <ServiceCard image={servicesImage} title={"Services"} description={"Lorem Ipsum"}/>
         </div>
       </div>
-      <div className='test-sect'>
+      <div className='test-sect uk-padding-large uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right'>
         <h2 className='uk-padding'>Testimonials</h2>
-        <div className='uk-flex uk-height-large'>
+        <div className='test-sect-div uk-height-medium uk-height-match="target: uk-card"'>
           <TestimonialCard name={"Sarah T."} image={p1} rating={4} description={"I couldn't have asked for a more seamless experience for my wedding! The team at Event Rentals made sure every detail was perfect - from the elegant chairs and stunning centerpieces to the dance floor that kept our guests grooving all night. Thank you for making our special day truly unforgettable!"}/>
           <TestimonialCard name={"Mark H."} image={p2} rating={4} description={"Wow! What a party we had! Event Rentals went above and beyond to provide us with everything we needed for our company's annual bash. The colorful linens, vibrant lighting, and high-quality sound equipment created an electrifying atmosphere that had everyone talking for weeks!"}/>
           <TestimonialCard name={"Emily L."} image={p3} rating={4} description={"From intimate gatherings to large-scale concerts, Event Rentals has been my go-to for all event needs. Their top-notch service, wide range of options, and attention to detail always exceed my expectations. Trust me; you won't find a better rental partner!"}/>

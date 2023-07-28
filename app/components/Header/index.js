@@ -7,7 +7,6 @@ function Header() {
 
   return (
     <div>
-
       <div className="uk-navbar-container uk-flex uk-visible@s nav-bg" uk-navbar="true">
         <div className="uk-navbar-left uk-margin-medium-left">
           <a className="uk-navbar-item uk-logo nav-logo" href="/">

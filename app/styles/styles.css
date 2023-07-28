@@ -41,7 +41,7 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .uk-slider-items li {
     height: 300px; /* Adjust the height for mobile devices */
   }
@@ -125,4 +125,49 @@
   color: gold;
 }
 
+/* Base styles for the testimonial cards container */
+.test-sect-div {
+  display: flex;
+  height: fit-content !important;
+}
+
+/* Small screens: Flex vertically (one column, three rows) */
+@media (max-width: 640px) {
+  .test-sect-div {
+    flex-direction: column;
+    height: fit-content !important;
+    align-items: center;
+  }
+  .test-card{
+    width: 60%;
+  }
+}
+
+/* Medium screens: Flex vertically (one column, three rows) */
+@media (min-width: 640px) and (max-width: 960px) {
+  .test-sect-div {
+    flex-direction: column;
+    height: fit-content !important;
+    align-items: center;
+  }
+  .test-card{
+    width: 60%;
+  }
+}
 /*Homepage End*/
+
+/*Footer*/
+.footer{
+  background-color: #303030;
+}
+
+.footer h3{
+  font-family: Playfair Display;
+}
+
+.footer p{
+  font-family: Montserrat;
+}
+
+/*Footer End*/
+
