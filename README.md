@@ -1,7 +1,5 @@
 # Event Rentals and Sales eCommerce Website
 
-![Event Rentals and Sales]
-
 Welcome to the Event Rentals and Sales eCommerce website repository! This MERN (MongoDB, Express.js, React.js, Node.js) stack project is designed to provide a user-friendly platform for renting and selling items needed for events such as weddings, parties, concerts, and more. Whether you're a customer looking to find the perfect items for your event or a vendor wanting to showcase your products, this platform has got you covered.
 
 ## Features
