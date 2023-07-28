@@ -1,0 +1,21 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR! 
+npm ERR! While resolving: react-boilerplate@4.0.0
+npm ERR! Found: eslint@5.16.0
+npm ERR! node_modules/eslint
+npm ERR!   dev eslint@"5.16.0" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer eslint@">=6" from eslint-plugin-storybook@0.6.12
+npm ERR! node_modules/eslint-plugin-storybook
+npm ERR!   dev eslint-plugin-storybook@"*" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /Users/yogeshganesh/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/yogeshganesh/.npm/_logs/2023-07-13T14_29_02_724Z-debug.log

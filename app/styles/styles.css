@@ -1,0 +1,128 @@
+@import '../fonts/fonts.css';
+
+/*NavBar*/
+.nav-bg{
+  background-color: #189488 !important;
+}
+
+.nav-links li a{
+  color: white !important;
+  font-family: Montserrat;
+}
+
+.nav-links a:hover {
+  color: #FF1493 !important; /* Change the link color on hover */
+}
+
+.nav-links li .cart{
+  font-size: 22px !important;
+}
+
+.logo{
+  width: 100px;
+}
+/*NavBar End*/
+
+/*Homepage*/
+.home h2{
+  text-align: center;
+  font-family: Playfair Display;
+  font-weight: bold;
+  color: white;
+}
+
+.home .prod-sect{
+  background-color: #303030;
+}
+
+.uk-slider-items li{
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .uk-slider-items li {
+    height: 300px; /* Adjust the height for mobile devices */
+  }
+}
+
+.uk-slider-items li img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-item{
+  position: absolute;
+}
+
+.slider-item h2 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  font-family: Playfair Display;
+  /* font-style: italic; */
+}
+
+.services-card-top{
+  /* background-color:#189488; */
+  border-radius: 10px;
+  box-shadow: 10px;
+  padding: 0 !important;
+}
+
+.services-card-bottom{
+  background-color:#189488;
+  border-radius: 15px;
+  box-shadow: 10px;
+  padding: 0 !important;
+  width: 300px;
+  text-align: center;
+  color: white !important;
+}
+
+.services-card-bottom :hover{
+  background-color:#FF1493;
+  border-radius: 15px;
+  color: white;
+}
+
+.services-card-top img{
+  height: 300px;
+  border-radius: 15px;
+}
+
+.home .test-sect {
+  background-color: #189488;
+}
+
+.test-card .uk-card-header{
+  border-bottom: 0px;
+}
+
+.test-card img {
+  width: 55px;
+  height: 50px;
+}
+
+.test-card h3{
+  font-family: Playfair Display;
+}
+
+.test-card p{
+  font-family: Playfair Display;
+  font-style: italic;
+}
+
+.filled-star{
+  color: gold;
+}
+
+/*Homepage End*/
