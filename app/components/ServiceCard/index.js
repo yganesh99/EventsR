@@ -17,7 +17,7 @@ function ServiceCard({image, title}) {
         </div>
       </div>
       <div className='uk-card services-card-bottom uk-card-hover uk-margin-large-right uk-margin-large-left'>
-        <h3 class="uk-card-title uk-text-bold uk-padding-small">{title}</h3>
+        <h3 className="uk-card-title uk-text-bold uk-padding-small">{title}</h3>
       </div>
     </div>
   );

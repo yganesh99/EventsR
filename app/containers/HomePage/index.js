@@ -39,7 +39,7 @@ export function HomePage() {
       </div>
       <div className='prod-sect'>
         <h2 className='uk-padding'>Products</h2>
-        <div class="uk-child-width-1-3@m uk-flex uk-margin-top uk-margin-left" uk-grid>
+        <div className="uk-child-width-1-3@m uk-flex uk-margin-top uk-margin-left prod-sect-div" uk-grid>
           <ServiceCard image={rentalImage} title={"Rentals"} description={"Lorem Ipsum"}/>
           <ServiceCard image={buyImage} title={"Buy"} description={"Lorem Ipsum"}/>
           <ServiceCard image={servicesImage} title={"Services"} description={"Lorem Ipsum"}/>

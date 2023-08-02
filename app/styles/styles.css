@@ -23,6 +23,7 @@
 }
 /*NavBar End*/
 
+
 /*Homepage*/
 .home h2{
   text-align: center;
@@ -41,6 +42,7 @@
   overflow: hidden;
 }
 
+/* slider */
 @media (max-width: 640px) {
   .uk-slider-items li {
     height: 300px; /* Adjust the height for mobile devices */
@@ -70,7 +72,9 @@
   font-family: Playfair Display;
   /* font-style: italic; */
 }
+/* slider end*/
 
+/* products section */
 .services-card-top{
   /* background-color:#189488; */
   border-radius: 10px;
@@ -99,6 +103,41 @@
   border-radius: 15px;
 }
 
+/* Small screens: Flex vertically (one column, three rows) */
+@media (max-width: 640px) {
+  .prod-sect-div {
+    flex-direction: column;
+    height: fit-content !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+    margin-left: 0px;
+  }
+  .services-card-bottom{
+    margin-left: 70px;
+  }
+}
+
+/* Medium screens: Flex vertically (one column, three rows) */
+@media (min-width: 640px) and (max-width: 960px) {
+  .prod-sect-div {
+    flex-direction: column;
+    height: fit-content !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 10px 0px 10px;
+    margin-left: 0px;
+  }
+  .services-card-bottom{
+    margin-left: 70px;
+  }
+  .services-card-top{
+    width: 60%;
+  }
+}
+/* products section end*/
+
+/* testimontials section */
 .home .test-sect {
   background-color: #189488;
 }
@@ -154,7 +193,31 @@
     width: 60%;
   }
 }
+/* testimontials section end*/
+
 /*Homepage End*/
+
+/*Product Categories Page Start*/
+
+
+/* Apply margin-left for large screens and larger (screen width 1200px and above) */
+@media (min-width: 960px) {
+  .prod-cat-grid {
+    margin-left: 12%;
+  }
+}
+
+/*Product Category Card Start*/
+.prod-cat-card h3{
+  color: white !important;
+  font-family: Playfair Display;
+}
+/*Product Category Card End*/
+
+
+/*Product Categories Page End*/
+
+
 
 /*Footer*/
 .footer{
@@ -168,6 +231,5 @@
 .footer p{
   font-family: Montserrat;
 }
-
 /*Footer End*/
 
