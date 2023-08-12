@@ -17,6 +17,8 @@ import FontFaceObserver from 'fontfaceobserver';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
 import 'uikit/dist/css/uikit.min.css';
+import "uikit/dist/css/uikit-core.min.css";
+import "uikit/dist/js/uikit.min.js"; 
 import '../app/styles/styles.css';
 
 // Import root app
