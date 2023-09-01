@@ -26,7 +26,7 @@ function Header() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/products">Products</a>
+              <a href="/product-categories">Products</a>
             </li>
             <li>
               <a href="/account">Account</a>
@@ -52,7 +52,7 @@ function Header() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/products">Products</a>
+              <a href="/product-categories">Products</a>
             </li>
             <li>
               <a href="/account">Account</a>

@@ -1,6 +1,6 @@
 @import '../fonts/fonts.css';
 
-/*NavBar*/
+/***************************NavBar***********************************/
 .nav-bg{
   background-color: #189488 !important;
 }
@@ -21,9 +21,9 @@
 .logo{
   width: 100px;
 }
-/*NavBar End*/
+/***********************************NavBar End*************************/
 
-/*Cart Start*/
+/***********************************Cart Start*************************/
 .cart-button {
   background: none;
   border: none;
@@ -110,10 +110,10 @@
   width: 100%;
 }
 
-/*Cart End*/
+/***********************************Cart End*****************************/
 
 
-/*Homepage*/
+/***********************************Homepage***********************************/
 .home h2{
   text-align: center;
   font-family: Playfair Display;
@@ -284,11 +284,9 @@
 }
 /* testimontials section end*/
 
-/*Homepage End*/
+/**********************************************Homepage End***********************************/
 
-/*Product Categories Page Start*/
-
-
+/***************************************Product Categories Page Start**************************/
 /* Apply margin-left for large screens and larger (screen width 1200px and above) */
 @media (min-width: 960px) {
   .prod-cat-grid {
@@ -303,12 +301,41 @@
 }
 /*Product Category Card End*/
 
+/***********************************Product Categories Page End***********************************/
 
-/*Product Categories Page End*/
+/***********************************Products Page************************************************/
+
+/*Product Card*/
+.prod-card img{
+  width: 20%
+}
+
+.prod-card button{
+  font-family: Montserrat;
+  font-size: 15px;
+  margin: 0;
+  color: white;
+  padding: 10px;
+  background-color: #FF1493;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.prod-card button:hover{
+  background-color: #FF1493;
+}
+
+.prod-card {
+  background-color: #189488;
+  border-radius: 10px;
+}
+/*Product Card End*/
 
 
+/***********************************Products Page End******************************************/
 
-/*Footer*/
+
+/***********************************Footer****************************************************/
 .footer{
   background-color: #303030;
 }
@@ -320,5 +347,5 @@
 .footer p{
   font-family: Montserrat;
 }
-/*Footer End*/
+/***********************************Footer End****************************************************/
 

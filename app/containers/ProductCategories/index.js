@@ -18,17 +18,17 @@ import ProductCategoryCard from '../../components/ProductCategoryCard';
 import reducer from './reducer';
 import saga from './saga';
 
-export function ProductCategories() {
+export function ProductCategories({ history }) {
   useInjectReducer({ key: 'productCategories', reducer });
   useInjectSaga({ key: 'productCategories', saga });
 
   return (
     <div className="prod-cat-container uk-margin-large">
       <div className="uk-grid uk-height-match prod-cat-grid" data-uk-grid>
-        <ProductCategoryCard cardImage={cardImage} title={"Concerts"}/>
-        <ProductCategoryCard cardImage={cardImage} title={"Weddings"}/>
-        <ProductCategoryCard cardImage={cardImage} title={"Parties"}/>
-        <ProductCategoryCard cardImage={cardImage} title={"Parties"}/>
+        <ProductCategoryCard onClick={() => history.push('/products?cat=concerts')} cardImage={cardImage} title={"Concerts"}/>
+        <ProductCategoryCard onClick={() => history.push('/products?cat=weddings')} cardImage={cardImage} title={"Weddings"}/>
+        <ProductCategoryCard onClick={() => history.push('/products?cat=parties')} cardImage={cardImage} title={"Parties"}/>
+        <ProductCategoryCard onClick={() => history.push('/products?cat=parties')} cardImage={cardImage} title={"Parties"}/>
       </div>
     </div>
 
