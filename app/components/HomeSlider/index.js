@@ -14,17 +14,17 @@ import concertImage from '../../images/concert.jpg'
 
 function HomeSlider() {
 
-  useEffect(() => {
-    const slider = UIkit.slider(".uk-slider" , {
-      autoplay: true,
-      autoplayInterval: 2000,
-    });
+  // useEffect(() => {
+  //   const slider = UIkit.slider(".uk-slider" , {
+  //     autoplay: true,
+  //     autoplayInterval: 2000,
+  //   });
 
-    return () => {
-      slider.stopAutoplay();
-    };
+  //   return () => {
+  //     slider.stopAutoplay();
+  //   };
 
-  }, []);
+  // }, []);
 
   return (
 

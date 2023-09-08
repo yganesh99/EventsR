@@ -34,15 +34,15 @@ export function HomePage() {
   return (
 
     <div className='home'>
-      <div>
+      <div className='slider-sect'>
         <HomeSlider/>
       </div>
-      <div className='prod-sect'>
-        <h2 className='uk-padding'>Products</h2>
-        <div className="uk-child-width-1-3@m uk-flex uk-margin-top uk-margin-left prod-sect-div" uk-grid>
-          <ServiceCard image={rentalImage} title={"Rentals"} description={"Lorem Ipsum"}/>
-          <ServiceCard image={buyImage} title={"Buy"} description={"Lorem Ipsum"}/>
-          <ServiceCard image={servicesImage} title={"Services"} description={"Lorem Ipsum"}/>
+      <div className='prod-sect uk-padding'>
+        <h2 className='uk-padding uk-margin-remove-bottom'>What We Provide</h2>
+        <div className="service-card-cont uk-flex uk-flex-center uk-flex-middle">
+          <ServiceCard image={rentalImage} buttonText={"Rentals"} description={"Lorem Ipsum"}/>
+          <ServiceCard image={buyImage} buttonText={"Buy"} description={"Lorem Ipsum"}/>
+          <ServiceCard image={servicesImage} buttonText={"Services"} description={"Lorem Ipsum"}/>
         </div>
       </div>
       <div className='test-sect uk-padding-large uk-padding-remove-top uk-padding-remove-left uk-padding-remove-right'>

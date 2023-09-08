@@ -8,17 +8,13 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
-function ServiceCard({image, title}) {
+function ServiceCard({image, description, buttonText}) {
+
+
   return (
-    <div className= 'uk-margin-right uk-margin-bottom'>
-      <div className="uk-card services-card-top uk-card-body uk-card-small uk-margin-bottom">
-        <div className="uk-card-media-top">
-          <img src={image} width="1800" height="1200" alt=""/>
-        </div>
-      </div>
-      <div className='uk-card services-card-bottom uk-card-hover uk-margin-large-right uk-margin-large-left'>
-        <h3 className="uk-card-title uk-text-bold uk-padding-small">{title}</h3>
-      </div>
+    <div className='service-card uk-flex uk-flex-column uk-flex-middle uk-flex-center uk-margin-top uk-margin-right uk-margin-left' style={{ backgroundImage: `url(${image})` }}>
+      <h3 className=''>{description}</h3>
+      <button className='uk-button uk-width-1-2'>{buttonText}</button>
     </div>
   );
 };

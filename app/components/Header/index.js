@@ -66,9 +66,9 @@ function Header() {
         </div>
       </div>
 
-      <div>
-
-        <div className={`cart-overlay ${isCartOpen ? 'open' : ''}`}>
+      <div style={{ display: isCartOpen ? 'block' : 'none' }}>
+        
+        <div  className={`cart-overlay ${isCartOpen ? 'open' : ''}`}>
 
           <div className="uk-offcanvas-bar uk-flex uk-flex-column cart-content">
 

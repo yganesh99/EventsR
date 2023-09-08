@@ -125,17 +125,20 @@
   background-color: #303030;
 }
 
-.uk-slider-items li{
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
+/* slider */
+
+.uk-slider-container{
+  height: 80vh;
 }
 
-/* slider */
-@media (max-width: 640px) {
-  .uk-slider-items li {
-    height: 300px; /* Adjust the height for mobile devices */
-  }
+.uk-slider-items {
+  height: 100%;
+}
+
+.uk-slider-items li{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .uk-slider-items li img{
@@ -146,11 +149,13 @@
 
 .slider-item{
   position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .slider-item h2 {
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -164,66 +169,46 @@
 /* slider end*/
 
 /* products section */
-.services-card-top{
-  /* background-color:#189488; */
+.service-card-cont {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media query for medium and large screens */
+@media screen and (min-width: 1200px) {
+  .service-card-cont {
+    flex-direction: row;
+  }
+}
+
+.service-card{
+  background-size: cover;
+  height: 300px;
+  width: 400px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .service-card {
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+  }
+}
+
+.service-card button{
   border-radius: 10px;
-  box-shadow: 10px;
-  padding: 0 !important;
-}
-
-.services-card-bottom{
-  background-color:#189488;
-  border-radius: 15px;
-  box-shadow: 10px;
-  padding: 0 !important;
-  width: 300px;
-  text-align: center;
-  color: white !important;
-}
-
-.services-card-bottom :hover{
-  background-color:#FF1493;
-  border-radius: 15px;
+  background: #FF1493;
   color: white;
 }
 
-.services-card-top img{
-  height: 300px;
-  border-radius: 15px;
+.service-card h3{
+  color: white;
+  font-size: 30px;
+  font-family: Playfair Display;
+  font-style: bold;
 }
 
-/* Small screens: Flex vertically (one column, three rows) */
-@media (max-width: 640px) {
-  .prod-sect-div {
-    flex-direction: column;
-    height: fit-content !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 10px 0px 10px;
-    margin-left: 0px;
-  }
-  .services-card-bottom{
-    margin-left: 70px;
-  }
-}
 
-/* Medium screens: Flex vertically (one column, three rows) */
-@media (min-width: 640px) and (max-width: 960px) {
-  .prod-sect-div {
-    flex-direction: column;
-    height: fit-content !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0px 10px 0px 10px;
-    margin-left: 0px;
-  }
-  .services-card-bottom{
-    margin-left: 70px;
-  }
-  .services-card-top{
-    width: 60%;
-  }
-}
 /* products section end*/
 
 /* testimontials section */
