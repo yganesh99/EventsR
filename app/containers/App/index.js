@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import indexRoutes from '../../routes/indexRoutes';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { compose } from 'redux';
+import { useInjectSaga } from 'utils/injectSaga';
+import { useInjectReducer } from 'utils/injectReducer';
+import makeSelectApp from './selectors';
+import reducer from './reducer';
+// import saga from './saga';
 
 
 import GlobalStyle from '../../global-styles';
@@ -18,11 +28,20 @@ const AppWrapper = styled.div`
   background-color: #F9F9F9;
 `;
 
-export default function App() {
+export function App({
+  isLoggedIn
+}) {
+  useInjectReducer({ key: 'app', reducer });
+  // useInjectSaga({ key: 'app', saga });
+
+  useEffect(() => {
+    console.log(isLoggedIn)
+  })
+  
   return (
     <Router>
       <AppWrapper>
-        <Header /> {/* Add the header component here */}
+        <Header isLoggedIn={isLoggedIn}/> {/* Add the header component here */}
         <Switch>
           {indexRoutes.map((prop, key) => (
             <Route
@@ -39,3 +58,26 @@ export default function App() {
     </Router>
   );
 }
+
+
+App.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  app: makeSelectApp(),
+  isLoggedIn: state.appReducer.isLoggedIn,
+});
+
+function mapDispatchToProps(dispatch) {
+  return {
+    dispatch,
+  };
+}
+
+const withConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+);
+
+export default compose(withConnect)(App);

@@ -4,7 +4,7 @@ import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../images/logo.png'
 import chairImage from '../../images/chair.png'
 
-function Header() {
+function Header({ isLoggedIn }) {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
 
@@ -29,7 +29,7 @@ function Header() {
               <a href="/product-categories">Products</a>
             </li>
             <li>
-              <a href="/account">Account</a>
+              {isLoggedIn ? <a href="/account">Account</a> : <a href="/account">Login/Register</a>}
             </li>
             <li>
               <a onClick={toggleCart}>
@@ -55,7 +55,7 @@ function Header() {
               <a href="/product-categories">Products</a>
             </li>
             <li>
-              <a href="/account">Account</a>
+              {isLoggedIn ? <a href="/account">Account</a> : <a href="/account">Login/Register</a>}
             </li>
             <li>
               <a onClick={toggleCart}>
