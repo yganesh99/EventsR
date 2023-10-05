@@ -12,7 +12,7 @@ import { compose } from 'redux';
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectProductCategories from './selectors';
-import cardImage from '../../images/concert.jpg'
+import cardImage from '../../images/concert.jpg';
 import ProductCategoryCard from '../../components/ProductCategoryCard';
 
 import reducer from './reducer';
@@ -25,13 +25,28 @@ export function ProductCategories({ history }) {
   return (
     <div className="prod-cat-container uk-margin-large">
       <div className="uk-grid uk-height-match prod-cat-grid" data-uk-grid>
-        <ProductCategoryCard onClick={() => history.push('/products?cat=concerts')} cardImage={cardImage} title={"Concerts"}/>
-        <ProductCategoryCard onClick={() => history.push('/products?cat=weddings')} cardImage={cardImage} title={"Weddings"}/>
-        <ProductCategoryCard onClick={() => history.push('/products?cat=parties')} cardImage={cardImage} title={"Parties"}/>
-        <ProductCategoryCard onClick={() => history.push('/products?cat=parties')} cardImage={cardImage} title={"Parties"}/>
+        <ProductCategoryCard
+          onClick={() => history.push('/products?cat=concerts')}
+          cardImage={cardImage}
+          title={'Concerts'}
+        />
+        <ProductCategoryCard
+          onClick={() => history.push('/products?cat=weddings')}
+          cardImage={cardImage}
+          title={'Weddings'}
+        />
+        <ProductCategoryCard
+          onClick={() => history.push('/products?cat=parties')}
+          cardImage={cardImage}
+          title={'Parties'}
+        />
+        <ProductCategoryCard
+          onClick={() => history.push('/products?cat=parties')}
+          cardImage={cardImage}
+          title={'Parties'}
+        />
       </div>
     </div>
-
   );
 }
 

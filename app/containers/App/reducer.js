@@ -8,7 +8,7 @@
  */
 
 import produce from 'immer';
-import { SET_LOGIN_SUCCESS, SET_LOGOUT_SUCCESS } from './constants';
+import { SET_LOGIN } from './constants';
 
 // The initial state of the App
 export const initialState = {
@@ -20,11 +20,8 @@ export const initialState = {
 const appReducer = (state = initialState, action) =>
   produce(state, draft => {
     switch (action.type) {
-      case SET_LOGIN_SUCCESS:
-        draft.isLoggedIn = true;
-        break;
-      case SET_LOGOUT_SUCCESS:
-        draft.isLoggedIn = false;
+      case SET_LOGIN:
+        draft.isLoggedIn = action.data;
         break;
     }
   });

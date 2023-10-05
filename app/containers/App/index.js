@@ -15,8 +15,8 @@ import makeSelectApp from './selectors';
 import reducer from './reducer';
 // import saga from './saga';
 
-
 import GlobalStyle from '../../global-styles';
+import { setLogin } from './actions';
 
 const AppWrapper = styled.div`
   min-width: 100%;
@@ -25,23 +25,25 @@ const AppWrapper = styled.div`
   min-height: 100vh;
   padding: 0px;
   flex-direction: column;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 `;
 
-export function App({
-  isLoggedIn
-}) {
+export function App({ onSetLoginSuccess, isLoggedIn }) {
   useInjectReducer({ key: 'app', reducer });
   // useInjectSaga({ key: 'app', saga });
 
   useEffect(() => {
-    console.log(isLoggedIn)
-  })
-  
+    console.log(isLoggedIn);
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn) {
+      onSetLoginSuccess(true);
+    }
+  });
+
   return (
     <Router>
       <AppWrapper>
-        <Header isLoggedIn={isLoggedIn}/> {/* Add the header component here */}
+        <Header isLoggedIn={isLoggedIn} /> {/* Add the header component here */}
         <Switch>
           {indexRoutes.map((prop, key) => (
             <Route
@@ -59,7 +61,6 @@ export function App({
   );
 }
 
-
 App.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
@@ -72,6 +73,9 @@ const mapStateToProps = state => ({
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
+    onSetLoginSuccess: data => {
+      dispatch(setLogin(data));
+    },
   };
 }
 

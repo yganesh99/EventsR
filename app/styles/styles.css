@@ -1,26 +1,32 @@
 @import '../fonts/fonts.css';
 
 /***************************NavBar***********************************/
-.nav-bg{
+.nav-bg {
   background-color: #189488 !important;
 }
 
-.nav-links li a{
+.nav-links li a {
   color: white !important;
   font-family: Montserrat;
 }
 
 .nav-links a:hover {
-  color: #FF1493 !important; /* Change the link color on hover */
+  color: #ff1493 !important; /* Change the link color on hover */
 }
 
-.nav-links li .cart{
+.nav-links li .cart {
   font-size: 22px !important;
 }
 
-.logo{
+.logo {
   width: 100px;
 }
+
+.cart:hover,
+.menu:hover {
+  color: #ff1493 !important;
+}
+
 /***********************************NavBar End*************************/
 
 /***********************************Cart Start*************************/
@@ -42,7 +48,7 @@
   z-index: 1000;
 }
 
-.cart-overlay h3{
+.cart-overlay h3 {
   font-family: Montserrat;
 }
 
@@ -65,69 +71,68 @@
   color: white;
 }
 
-.cart-img-cont{
+.cart-img-cont {
   max-width: 15%;
 }
 
-.cart-card{
+.cart-card {
   background-color: #189488;
   border-radius: 20px;
 }
 
-.cart-card p{
+.cart-card p {
   font-family: Montserrat;
   font-size: 15px;
   margin: 0;
   color: white;
 }
 
-.cart-val-cont{
+.cart-val-cont {
   width: 100%;
 }
 
-.cart-val-cont p{
+.cart-val-cont p {
   font-family: Montserrat;
   font-size: 15px;
   margin: 0;
   color: white;
 }
 
-.cart-checkout-cont p{
+.cart-checkout-cont p {
   font-family: Montserrat;
   font-size: 15px;
   margin: 0;
   color: white;
 }
 
-.cart-checkout-cont button{
+.cart-checkout-cont button {
   font-family: Montserrat;
   font-size: 15px;
   margin: 0;
   color: white;
   padding: 10px;
-  background-color: #FF1493;
+  background-color: #ff1493;
   border-radius: 10px;
   width: 100%;
 }
 
 /***********************************Cart End*****************************/
 
-
 /***********************************Homepage***********************************/
-.home h2{
+.home h2 {
   text-align: center;
   font-family: Playfair Display;
   font-weight: bold;
   color: white;
 }
 
-.home .prod-sect{
+.home .prod-sect {
   background-color: #303030;
 }
 
 /* slider */
 
-.uk-slider-container{
+.uk-slider-container {
   height: 80vh;
 }
 
@@ -135,19 +140,19 @@
   height: 100%;
 }
 
-.uk-slider-items li{
+.uk-slider-items li {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.uk-slider-items li img{
+.uk-slider-items li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.slider-item{
+.slider-item {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -181,7 +186,7 @@
   }
 }
 
-.service-card{
+.service-card {
   background-size: cover;
   height: 300px;
   width: 400px;
@@ -195,19 +200,18 @@
   }
 }
 
-.service-card button{
+.service-card button {
   border-radius: 10px;
-  background: #FF1493;
+  background: #ff1493;
   color: white;
 }
 
-.service-card h3{
+.service-card h3 {
   color: white;
   font-size: 30px;
   font-family: Playfair Display;
   font-style: bold;
 }
-
 
 /* products section end*/
 
@@ -216,7 +220,7 @@
   background-color: #189488;
 }
 
-.test-card .uk-card-header{
+.test-card .uk-card-header {
   border-bottom: 0px;
 }
 
@@ -225,16 +229,16 @@
   height: 50px;
 }
 
-.test-card h3{
+.test-card h3 {
   font-family: Playfair Display;
 }
 
-.test-card p{
+.test-card p {
   font-family: Playfair Display;
   font-style: italic;
 }
 
-.filled-star{
+.filled-star {
   color: gold;
 }
 
@@ -251,7 +255,7 @@
     height: fit-content !important;
     align-items: center;
   }
-  .test-card{
+  .test-card {
     width: 60%;
   }
 }
@@ -263,7 +267,7 @@
     height: fit-content !important;
     align-items: center;
   }
-  .test-card{
+  .test-card {
     width: 60%;
   }
 }
@@ -273,14 +277,31 @@
 
 /***************************************Product Categories Page Start**************************/
 /* Apply margin-left for large screens and larger (screen width 1200px and above) */
-@media (min-width: 960px) {
+/* Large screens (min-width: 961px) */
+@media (min-width: 961px) {
   .prod-cat-grid {
-    margin-left: 12%;
+    margin-left: 10%;
+  }
+}
+
+/* Medium and small screens (max-width: 960px) */
+@media (max-width: 960px) {
+  .prod-cat-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Extra-small screens (max-width: 400px) */
+@media (max-width: 400px) {
+  .prod-cat-grid {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 /*Product Category Card Start*/
-.prod-cat-card h3{
+.prod-cat-card h3 {
   color: white !important;
   font-family: Playfair Display;
 }
@@ -291,23 +312,23 @@
 /***********************************Products Page************************************************/
 
 /*Product Card*/
-.prod-card img{
-  width: 20%
+.prod-card img {
+  width: 20%;
 }
 
-.prod-card button{
+.prod-card button {
   font-family: Montserrat;
   font-size: 15px;
   margin: 0;
   color: white;
   padding: 10px;
-  background-color: #FF1493;
+  background-color: #ff1493;
   border-radius: 10px;
   width: 100%;
 }
 
-.prod-card button:hover{
-  background-color: #FF1493;
+.prod-card button:hover {
+  background-color: #ff1493;
 }
 
 .prod-card {
@@ -316,21 +337,18 @@
 }
 /*Product Card End*/
 
-
 /***********************************Products Page End******************************************/
 
-
 /***********************************Footer****************************************************/
-.footer{
+.footer {
   background-color: #303030;
 }
 
-.footer h3{
+.footer h3 {
   font-family: Playfair Display;
 }
 
-.footer p{
+.footer p {
   font-family: Montserrat;
 }
 /***********************************Footer End****************************************************/
-
