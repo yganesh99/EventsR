@@ -41,9 +41,9 @@ function Header({ isLoggedIn }) {
             </li>
             <li>
               {isLoggedIn ? (
-                <a href="/account">Account</a>
+                <a href="/login">Account</a>
               ) : (
-                <a href="/account">Login/Register</a>
+                <a href="/login">Login/Register</a>
               )}
             </li>
             <li>
@@ -103,9 +103,9 @@ function Header({ isLoggedIn }) {
             </li>
             <li>
               {isLoggedIn ? (
-                <a href="/account">Account</a>
+                <a href="/login">Account</a>
               ) : (
-                <a href="/account">Login/Register</a>
+                <a href="/login">Login/Register</a>
               )}
             </li>
             {isLoggedIn ? (

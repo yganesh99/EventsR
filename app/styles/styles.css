@@ -118,6 +118,39 @@
 
 /***********************************Cart End*****************************/
 
+/***********************************Login Page************************************************/
+.login {
+  background-color: rgb(241, 240, 240);
+}
+
+.login-form input::placeholder {
+  font-family: Montserrat;
+}
+
+.login-form button {
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+  background-color: #ff1493;
+}
+
+.login-form button:hover {
+  background-color: #ff1493;
+}
+
+.login-form h3 {
+  font-family: Montserrat;
+}
+
+.login-form a {
+  font-family: Montserrat;
+  text-decoration: none;
+  color: #189488;
+  text-align: center;
+}
+
+/***********************************Login Page End************************************************/
+
 /***********************************Homepage***********************************/
 .home h2 {
   text-align: center;

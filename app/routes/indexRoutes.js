@@ -2,11 +2,17 @@ import HomePage from '../containers/HomePage/Loadable';
 import ProductCategories from '../containers/ProductCategories/Loadable';
 import Products from '../containers/Products/Loadable';
 import NotFoundPage from '../containers/NotFoundPage/Loadable';
+import Login from '../containers/Login/Loadable';
 
 const routes = [
   {
     path: '/',
     component: HomePage,
+    exact: true,
+  },
+  {
+    path: '/login',
+    component: Login,
     exact: true,
   },
   {
@@ -23,6 +29,5 @@ const routes = [
     component: NotFoundPage,
   },
 ];
-
 
 export default routes;
