@@ -9,6 +9,7 @@ import history from 'utils/history';
 import globalReducer from 'containers/App/reducer';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import appReducer from './containers/App/reducer';
+import registerReducer from './containers/Register/reducer';
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
  */
@@ -19,6 +20,7 @@ export default function createReducer(injectedReducers = {}) {
     router: connectRouter(history),
     ...injectedReducers,
     appReducer,
+    registerReducer,
   });
 
   return rootReducer;

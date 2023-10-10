@@ -118,7 +118,7 @@
 
 /***********************************Cart End*****************************/
 
-/***********************************Login Page************************************************/
+/***********************************Login/Register Page************************************************/
 .login {
   background-color: rgb(241, 240, 240);
 }
@@ -130,7 +130,7 @@
 .login-form button {
   padding: 10px;
   border-radius: 10px;
-  width: 20%;
+  width: 100px;
   background-color: #ff1493;
 }
 
@@ -149,7 +149,18 @@
   text-align: center;
 }
 
-/***********************************Login Page End************************************************/
+.password-input {
+  position: relative;
+}
+
+.password-input .eye {
+  position: absolute;
+  top: 35%;
+  right: 10px; /* Adjust the right position based on your preference */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/***********************************Login/Register Page End************************************************/
 
 /***********************************Homepage***********************************/
 .home h2 {

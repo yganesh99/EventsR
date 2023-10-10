@@ -27,7 +27,7 @@ export function Login() {
     <div className="uk-form login">
       <form className="login-form uk-margin-large-top uk-width-1-2 uk-align-center uk-text-center">
         <img className="logo uk-align-center" src={logo} alt="logo" />
-        <h3 className="uk-text-center">Welcome to EventsR</h3>
+        <h3 className="uk-text-center">Login to EventsR</h3>
         <input
           placeholder="E-mail"
           className="uk-input uk-margin-bottom uk-margin-top"

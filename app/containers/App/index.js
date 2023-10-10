@@ -33,7 +33,7 @@ export function App({ onSetLoginSuccess, isLoggedIn }) {
   // useInjectSaga({ key: 'app', saga });
 
   useEffect(() => {
-    console.log(isLoggedIn);
+    // console.log(isLoggedIn);
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (isLoggedIn) {
       onSetLoginSuccess(true);
