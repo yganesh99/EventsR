@@ -9,6 +9,7 @@ import {
   REGISTER,
   REGISTER_SUCCESS,
   REGISTER_ERROR,
+  DATA_CHANGE,
 } from './constants';
 
 export function defaultAction() {
@@ -17,23 +18,31 @@ export function defaultAction() {
   };
 }
 
-export function register() {
+export function register(data) {
   return {
     type: REGISTER,
     data,
   };
 }
 
-export function registerSuccess() {
+export function registerSuccess(payload) {
   return {
     type: REGISTER_SUCCESS,
     payload,
   };
 }
 
-export function registerError() {
+export function registerError(payload) {
   return {
     type: REGISTER_ERROR,
     payload,
+  };
+}
+
+export function dataChange(fieldName, fieldValue) {
+  return {
+    type: DATA_CHANGE,
+    fieldName,
+    fieldValue,
   };
 }

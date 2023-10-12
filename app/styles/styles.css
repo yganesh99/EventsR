@@ -121,6 +121,7 @@
 /***********************************Login/Register Page************************************************/
 .login {
   background-color: rgb(241, 240, 240);
+  position: relative;
 }
 
 .login-form input::placeholder {
@@ -159,6 +160,17 @@
   right: 10px; /* Adjust the right position based on your preference */
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+.auth-loading-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login.loading {
+  pointer-events: none; /* Disable user interaction */
 }
 /***********************************Login/Register Page End************************************************/
 

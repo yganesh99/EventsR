@@ -1,6 +1,31 @@
-// import { take, call, put, select } from 'redux-saga/effects';
+import { takeLatest, call, put } from 'redux-saga/effects';
+import { URL } from '../../utils/constants';
+import request from '../../utils/request';
+import { LOGIN } from './constants';
+import { loginSuccess, loginError } from './actions';
 
-// Individual exports for testing
+export function* login(action) {
+  const requestURL = `${URL}/login`;
+
+  const options = {
+    method: 'POST',
+    body: JSON.stringify(action.data),
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.accessToken}`,
+    },
+  };
+
+  try {
+    const result = yield call(request, requestURL, options);
+    yield put(loginSuccess(result));
+  } catch (err) {
+    const errorResponse = yield call([err.response, 'json']);
+    console.log(errorResponse);
+    yield put(loginError(errorResponse));
+  }
+}
+
 export default function* loginSaga() {
-  // See example in containers/HomePage/saga.js
+  yield takeLatest(LOGIN, login);
 }

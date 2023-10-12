@@ -20,9 +20,18 @@ import logo from '../../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import toast, { Toaster } from 'react-hot-toast';
+import { Bars } from 'react-loader-spinner';
 import { isValidEmail, isValidPhoneNumber } from '../../utils/functions';
+import { register, dataChange } from './actions';
 
-export function Register() {
+export function Register({
+  history,
+  loading,
+  onRegister,
+  onDataChange,
+  successMessage,
+  errorMessage,
+}) {
   useInjectReducer({ key: 'register', reducer });
   useInjectSaga({ key: 'register', saga });
 
@@ -55,13 +64,6 @@ export function Register() {
     });
   };
 
-  const register = () => {
-    console.log(state);
-    if (validateForm()) {
-      toast.success('You have been registered successfully.');
-    }
-  };
-
   const validateForm = () => {
     if (state.fName === '') {
       toast.error('First Name is required to register.');
@@ -83,9 +85,47 @@ export function Register() {
     return false;
   };
 
+  const registerUser = () => {
+    if (validateForm()) {
+      onRegister({
+        firstName: state.fName,
+        lastName: state.lName,
+        email: state.email,
+        contactNo: state.mobileNo,
+        password: state.password,
+        role: 'customer',
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (successMessage !== '') {
+      toast.success(successMessage);
+      onDataChange(successMessage, '');
+      setTimeout(() => {
+        window.location.href = '/login';
+      }, 1000);
+    }
+    if (errorMessage !== '') {
+      toast.error(errorMessage);
+      onDataChange(errorMessage, '');
+    }
+  }, [successMessage, errorMessage]);
+
   return (
-    <div className="uk-form login">
+    <div className={`uk-form login ${loading ? 'loading' : ''}`}>
       <Toaster />
+      <div className="auth-loading-overlay">
+        <Bars
+          height="80"
+          width="80"
+          color="#ff1493"
+          ariaLabel="bars-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={loading ? true : false}
+        />
+      </div>
       <div className="login-form uk-margin-large-top uk-width-1-2 uk-align-center uk-text-center">
         <img className="logo uk-align-center" src={logo} alt="logo" />
 
@@ -163,7 +203,7 @@ export function Register() {
 
         <button
           className="uk-button-primary uk-align-center"
-          onClick={register}
+          onClick={registerUser}
         >
           Register
         </button>
@@ -180,13 +220,22 @@ Register.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = createStructuredSelector({
+const mapStateToProps = state => ({
   register: makeSelectRegister(),
+  loading: state.registerReducer.loading,
+  successMessage: state.registerReducer.successMessage,
+  errorMessage: state.registerReducer.errorMessage,
 });
 
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
+    onRegister: data => {
+      dispatch(register(data));
+    },
+    onDataChange: (fieldName, fieldValue) => {
+      dispatch(dataChange(fieldName, fieldValue));
+    },
   };
 }
 

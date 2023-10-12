@@ -9,14 +9,19 @@ export function* register(action) {
 
   const options = {
     method: 'POST',
+    body: JSON.stringify(action.data),
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.accessToken}`,
+    },
   };
 
   try {
     const result = yield call(request, requestURL, options);
     yield put(registerSuccess(result));
   } catch (err) {
-    console.log(err);
-    yield put(registerError(err));
+    const errorResponse = yield call([err.response, 'json']);
+    yield put(registerError(errorResponse));
   }
 }
 

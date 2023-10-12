@@ -93,6 +93,7 @@
     "react-helmet": "6.0.0-beta",
     "react-hot-toast": "^2.4.1",
     "react-intl": "2.8.0",
+    "react-loader-spinner": "^5.4.5",
     "react-redux": "^6",
     "react-router-dom": "5.0.0",
     "redux": "4.0.1",

@@ -35,7 +35,8 @@ export function App({ onSetLoginSuccess, isLoggedIn }) {
   useEffect(() => {
     // console.log(isLoggedIn);
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (isLoggedIn) {
+    const accessToken = localStorage.getItem('accessToken');
+    if (isLoggedIn && accessToken) {
       onSetLoginSuccess(true);
     }
   });

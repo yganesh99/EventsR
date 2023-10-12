@@ -10,6 +10,7 @@ import globalReducer from 'containers/App/reducer';
 import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import appReducer from './containers/App/reducer';
 import registerReducer from './containers/Register/reducer';
+import loginReducer from './containers/Login/reducer';
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
  */
@@ -21,6 +22,7 @@ export default function createReducer(injectedReducers = {}) {
     ...injectedReducers,
     appReducer,
     registerReducer,
+    loginReducer,
   });
 
   return rootReducer;
