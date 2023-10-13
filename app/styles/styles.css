@@ -214,10 +214,10 @@
 /* Screens large than 900px */
 @media (min-width: 900px) {
   .my-account {
-    height: 45vh;
+    height: 60vh;
   }
   .account-action-cont {
-    margin-bottom: 60px !important;
+    margin-top: 100px !important;
   }
 }
 
