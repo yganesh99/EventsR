@@ -81,14 +81,14 @@ export function Login({
     console.log(successMessage, errorMessage);
     if (successMessage !== '') {
       toast.success(successMessage);
-      onDataChange(successMessage, '');
+      onDataChange('successMessage', '');
       setTimeout(() => {
         window.location.href = '/';
       }, 1000);
     }
     if (errorMessage !== '') {
       toast.error(errorMessage);
-      onDataChange(errorMessage, '');
+      onDataChange('errorMessage', '');
     }
   }, [successMessage, errorMessage]);
 

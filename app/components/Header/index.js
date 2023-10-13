@@ -41,7 +41,7 @@ function Header({ isLoggedIn }) {
             </li>
             <li>
               {isLoggedIn ? (
-                <a href="/login">Account</a>
+                <a href="/my-account">My Account</a>
               ) : (
                 <a href="/login">Login/Register</a>
               )}
@@ -103,7 +103,7 @@ function Header({ isLoggedIn }) {
             </li>
             <li>
               {isLoggedIn ? (
-                <a href="/login">Account</a>
+                <a href="/my-account">My Account</a>
               ) : (
                 <a href="/login">Login/Register</a>
               )}

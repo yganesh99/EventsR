@@ -40,16 +40,16 @@ const loginReducer = (state = initialState, action) =>
           : null;
         break;
       case LOGIN_ERROR:
-        console.log('lasd', action.payload);
         draft.loading = false;
         draft.errorMessage = action.payload.error ? action.payload.error : '';
+        console.log('lasd', draft.errorMessage);
         break;
       case DATA_CHANGE:
         if (action.fieldName === 'successMessage') {
-          successMessage = action.fieldValue;
+          draft.successMessage = action.fieldValue;
         }
         if (action.fieldName === 'errorMessage') {
-          errorMessage = action.fieldValue;
+          draft.errorMessage = action.fieldValue;
         }
         break;
     }

@@ -101,14 +101,14 @@ export function Register({
   useEffect(() => {
     if (successMessage !== '') {
       toast.success(successMessage);
-      onDataChange(successMessage, '');
+      onDataChange('successMessage', '');
       setTimeout(() => {
         window.location.href = '/login';
       }, 1000);
     }
     if (errorMessage !== '') {
       toast.error(errorMessage);
-      onDataChange(errorMessage, '');
+      onDataChange('errorMessage', '');
     }
   }, [successMessage, errorMessage]);
 

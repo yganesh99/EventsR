@@ -4,6 +4,7 @@ import Products from '../containers/Products/Loadable';
 import NotFoundPage from '../containers/NotFoundPage/Loadable';
 import Login from '../containers/Login/Loadable';
 import Register from '../containers/Register/Loadable';
+import MyAccount from '../containers/MyAccount/Loadable';
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
   {
     path: '/register',
     component: Register,
+    exact: true,
+  },
+  {
+    path: '/my-account',
+    component: MyAccount,
     exact: true,
   },
   {

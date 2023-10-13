@@ -39,10 +39,10 @@ const registerReducer = (state = initialState, action) =>
         break;
       case DATA_CHANGE:
         if (action.fieldName === 'successMessage') {
-          successMessage = action.fieldValue;
+          draft.successMessage = action.fieldValue;
         }
         if (action.fieldName === 'errorMessage') {
-          errorMessage = action.fieldValue;
+          draft.errorMessage = action.fieldValue;
         }
         break;
     }
