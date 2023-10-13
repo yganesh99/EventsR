@@ -211,10 +211,23 @@
   }
 }
 
-/* Screens smaller than 460px */
+/* Screens large than 900px */
+@media (min-width: 900px) {
+  .my-account {
+    height: 45vh;
+  }
+  .account-action-cont {
+    margin-bottom: 60px !important;
+  }
+}
+
+/* Screens large than 900px */
 @media (min-width: 1200px) {
   .my-account {
     height: 60vh;
+  }
+  .account-action-cont {
+    margin-bottom: 60px !important;
   }
 }
 /***********************************My Account Page End************************************************/
