@@ -78,7 +78,6 @@ export function Login({
   };
 
   useEffect(() => {
-    console.log(successMessage, errorMessage);
     if (successMessage !== '') {
       toast.success(successMessage);
       onDataChange('successMessage', '');

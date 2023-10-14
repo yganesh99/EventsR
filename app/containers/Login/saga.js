@@ -12,7 +12,6 @@ export function* login(action) {
     body: JSON.stringify(action.data),
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${localStorage.accessToken}`,
     },
   };
 

@@ -11,6 +11,7 @@ import languageProviderReducer from 'containers/LanguageProvider/reducer';
 import appReducer from './containers/App/reducer';
 import registerReducer from './containers/Register/reducer';
 import loginReducer from './containers/Login/reducer';
+import myProfileReducer from './containers/MyProfile/reducer';
 /**
  * Merges the main reducer with the router state and dynamically injected reducers
  */
@@ -23,6 +24,7 @@ export default function createReducer(injectedReducers = {}) {
     appReducer,
     registerReducer,
     loginReducer,
+    myProfileReducer,
   });
 
   return rootReducer;

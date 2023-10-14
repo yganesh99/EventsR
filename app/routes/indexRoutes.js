@@ -5,6 +5,7 @@ import NotFoundPage from '../containers/NotFoundPage/Loadable';
 import Login from '../containers/Login/Loadable';
 import Register from '../containers/Register/Loadable';
 import MyAccount from '../containers/MyAccount/Loadable';
+import MyProfile from '../containers/MyProfile/Loadable';
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
   {
     path: '/my-account',
     component: MyAccount,
+    exact: true,
+  },
+  {
+    path: '/my-profile',
+    component: MyProfile,
     exact: true,
   },
   {

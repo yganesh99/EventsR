@@ -124,7 +124,7 @@ function Header({ isLoggedIn }) {
               &times;
             </button>
 
-            <h3>Your Cart</h3>
+            <h3>My Cart</h3>
 
             <div className="uk-margin">
               <div className="cart-card uk-card uk-card-default uk-padding uk-padding-remove-left uk-padding-remove-right uk-margin-top uk-margin-bottom uk-flex uk-flex-middle">

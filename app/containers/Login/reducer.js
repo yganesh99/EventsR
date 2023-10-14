@@ -38,6 +38,12 @@ const loginReducer = (state = initialState, action) =>
         action.payload.accessToken
           ? localStorage.setItem('isLoggedIn', true)
           : null;
+        action.payload.name
+          ? localStorage.setItem('username', action.payload.name)
+          : null;
+        action.payload.email
+          ? localStorage.setItem('userEmail', action.payload.email)
+          : null;
         break;
       case LOGIN_ERROR:
         draft.loading = false;
