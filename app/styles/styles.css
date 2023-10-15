@@ -224,13 +224,78 @@
 /* Screens large than 900px */
 @media (min-width: 1200px) {
   .my-account {
-    height: 60vh;
+    height: 80vh;
   }
   .account-action-cont {
-    margin-bottom: 60px !important;
+    margin-top: 100px !important;
   }
 }
 /***********************************My Account Page End************************************************/
+
+/***********************************My Orders Page************************************************/
+.my-orders {
+  height: auto;
+  width: 100%;
+}
+
+.my-orders h2 {
+  font-family: Playfair Display;
+}
+
+/* OrderCard.css */
+
+.order-card {
+  width: 70%;
+  margin: 20px;
+}
+
+.order-header {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: left !important;
+}
+
+.order-items {
+  margin-bottom: 20px;
+}
+
+.order-item {
+  margin-bottom: 30px;
+}
+
+.order-item img {
+  width: 5%;
+}
+
+.item-name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.item-quantity {
+  margin: 0px 0px 0px 300px;
+}
+
+.order-total {
+  text-align: right;
+  font-weight: bold;
+}
+
+.view-order-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.order-card button {
+  padding: 10px;
+  border-radius: 10px;
+  width: auto;
+  background-color: #ff1493;
+  color: white;
+}
+
+/***********************************My Orders Page End************************************************/
 
 /***********************************Homepage***********************************/
 .home h2 {

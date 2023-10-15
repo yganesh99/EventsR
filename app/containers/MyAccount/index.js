@@ -40,7 +40,7 @@ export function MyAccount() {
   };
 
   return (
-    <div className="my-account uk-height-1-1 uk-text-center">
+    <div className="my-account uk-text-center">
       <h2 className="uk-margin-large-top uk-margin-large-bottom">
         Hi {username}
       </h2>

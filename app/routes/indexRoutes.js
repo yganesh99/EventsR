@@ -6,6 +6,7 @@ import Login from '../containers/Login/Loadable';
 import Register from '../containers/Register/Loadable';
 import MyAccount from '../containers/MyAccount/Loadable';
 import MyProfile from '../containers/MyProfile/Loadable';
+import MyOrders from '../containers/MyOrders/Loadable';
 
 const routes = [
   {
@@ -31,6 +32,11 @@ const routes = [
   {
     path: '/my-profile',
     component: MyProfile,
+    exact: true,
+  },
+  {
+    path: '/my-orders',
+    component: MyOrders,
     exact: true,
   },
   {
