@@ -18,6 +18,9 @@ function Header({ isLoggedIn }) {
 
   const logout = () => {
     localStorage.setItem('isLoggedIn', false);
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('username');
+    localStorage.removeItem('userEmail');
   };
 
   return (
@@ -46,6 +49,14 @@ function Header({ isLoggedIn }) {
                 <a href="/login">Login/Register</a>
               )}
             </li>
+
+            {isLoggedIn ? (
+              <li>
+                <a href="/" onClick={logout}>
+                  Logout
+                </a>
+              </li>
+            ) : null}
             <li>
               <a onClick={toggleCart}>
                 <FontAwesomeIcon
@@ -55,11 +66,6 @@ function Header({ isLoggedIn }) {
                 />
               </a>
             </li>
-            {isLoggedIn ? (
-              <li>
-                <a href="/" onClick={logout} />
-              </li>
-            ) : null}
           </ul>
         </div>
       </div>
@@ -110,7 +116,9 @@ function Header({ isLoggedIn }) {
             </li>
             {isLoggedIn ? (
               <li>
-                <a href="/" onClick={logout} />
+                <a href="/" onClick={logout}>
+                  Logout
+                </a>
               </li>
             ) : null}
           </ul>
