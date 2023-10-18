@@ -7,7 +7,6 @@ import Register from '../containers/Register/Loadable';
 import MyAccount from '../containers/MyAccount/Loadable';
 import MyProfile from '../containers/MyProfile/Loadable';
 import MyOrders from '../containers/MyOrders/Loadable';
-import MyOrder from '../containers/MyOrder/Loadable';
 
 const routes = [
   {
@@ -38,11 +37,6 @@ const routes = [
   {
     path: '/my-orders',
     component: MyOrders,
-    exact: true,
-  },
-  {
-    path: '/my-orders/:id',
-    component: MyOrder,
     exact: true,
   },
   {

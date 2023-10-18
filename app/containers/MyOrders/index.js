@@ -34,9 +34,13 @@ export function MyOrders() {
     total: 150.99,
   };
 
+  const onDropdownChange = e => {
+    console.log(e);
+  };
+
   return (
-    <div className="my-orders uk-container  uk-text-center uk-margin-top uk-margin-bottom">
-      <h2>My Orders</h2>
+    <div className="my-orders uk-text-center">
+      <h2 className="uk-margin-large-top">My Orders</h2>
       <div className=" uk-flex uk-flex-center uk-flex-middle uk-flex-column">
         <MyOrderCard order={orderDetails} />
         <MyOrderCard order={orderDetails} />
