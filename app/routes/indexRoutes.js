@@ -1,5 +1,5 @@
 import HomePage from '../containers/HomePage/Loadable';
-import ProductCategories from '../containers/ProductCategories/Loadable';
+import ProductTypes from '../containers/ProductTypes/Loadable';
 import Products from '../containers/Products/Loadable';
 import NotFoundPage from '../containers/NotFoundPage/Loadable';
 import Login from '../containers/Login/Loadable';
@@ -40,8 +40,8 @@ const routes = [
     exact: true,
   },
   {
-    path: '/product-categories',
-    component: ProductCategories,
+    path: '/product-types',
+    component: ProductTypes,
     exact: true,
   },
   {

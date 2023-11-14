@@ -1,6 +1,6 @@
 /**
  *
- * Asynchronously loads the component for ProductCategories
+ * Asynchronously loads the component for ProductTypes
  *
  */
 

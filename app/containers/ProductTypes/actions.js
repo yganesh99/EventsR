@@ -1,6 +1,6 @@
 /*
  *
- * ProductCategories actions
+ * ProductTypes actions
  *
  */
 

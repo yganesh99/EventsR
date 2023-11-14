@@ -41,6 +41,10 @@ export function MyOrders() {
   return (
     <div className="my-orders uk-text-center">
       <h2 className="uk-margin-large-top">My Orders</h2>
+      <div className="my-orders-filters">
+        <input className="" type="date" />
+        <input className="" type="text" />
+      </div>
       <div className=" uk-flex uk-flex-center uk-flex-middle uk-flex-column">
         <MyOrderCard order={orderDetails} />
         <MyOrderCard order={orderDetails} />

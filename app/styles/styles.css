@@ -472,39 +472,42 @@
 
 /**********************************************Homepage End***********************************/
 
-/***************************************Product Categories Page Start**************************/
-/* Apply margin-left for large screens and larger (screen width 1200px and above) */
-/* Large screens (min-width: 961px) */
-@media (min-width: 961px) {
-  .prod-cat-grid {
-    margin-left: 10%;
+/***************************************Product Type Page Start**************************/
+/* Screens smaller than 460px */
+@media (max-width: 459px) {
+  .prod-type-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .prod-type-card {
+    margin-right: 0px !important;
+    margin-top: 10px;
   }
 }
 
-/* Medium and small screens (max-width: 960px) */
-@media (max-width: 960px) {
-  .prod-cat-grid {
-    margin-left: auto;
-    margin-right: auto;
+/* Screens large than 900px */
+@media (min-width: 900px) {
+  .prod-type-cont {
+    margin-top: 100px !important;
   }
 }
 
-/* Extra-small screens (max-width: 400px) */
-@media (max-width: 400px) {
-  .prod-cat-grid {
-    margin-left: auto;
-    margin-right: auto;
+/* Screens large than 1200px */
+@media (min-width: 1200px) {
+  .prod-type-cont {
+    margin-top: 100px !important;
   }
 }
 
-/*Product Category Card Start*/
-.prod-cat-card h3 {
-  color: white !important;
-  font-family: Playfair Display;
+.prod-type-card {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
-/*Product Category Card End*/
 
-/***********************************Product Categories Page End***********************************/
+/***********************************Product Type Page End***********************************/
 
 /***********************************Products Page************************************************/
 

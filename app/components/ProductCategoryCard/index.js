@@ -20,7 +20,7 @@ function ProductCategoryCard({ cardImage, title, onClick }) {
   return (
     <div
       onClick={onClick}
-      className="uk-card uk-card-default uk-card-body uk-width-1-4@m uk-padding-remove uk-margin-left uk-margin-right uk-margin-bottom uk-animation-fade prod-cat-card"
+      className="uk-card uk-card-default uk-card-body uk-width-1-4@m uk-padding-remove uk-margin-left uk-margin-right uk-margin-bottom uk-animation-fade prod-type-card"
     >
       <div className="uk-position-relative" style={cardStyle}>
         <div className="uk-position-center uk-text-center">
